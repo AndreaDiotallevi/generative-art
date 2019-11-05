@@ -1,1 +1,3 @@
-A Collection of my Generative Artwork with P5 and Processing
+# Generative Art
+
+A collection of my generative artwork, made with p5.js and processing.
