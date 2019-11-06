@@ -14,6 +14,6 @@ The only prerequisites are:
 
 ## Usage
 
-Since the sketches are made with Javascript, they can be viewed directly in the browser:
+Since the sketches are made with Javascript, they can be viewed directly from the browser:
 - Clone the repository.
-- Open a new browser page and choose an index.html file.
+- Open a browser new page and choose an index.html file.
