@@ -9,5 +9,11 @@ This repository is a collection of my personal experimentations within the world
 ## Prerequisites
 
 The only prerequisites are:
-- A browser, Chrome recommended.
-- A code editor, VSCode recommended.
+- A browser, [Chrome](https://www.google.com/chrome/) recommended.
+- A code editor, [VSCode](https://code.visualstudio.com/) or [Atom](https://atom.io/) recommended.
+
+## Usage
+
+Since the sketches are made with Javascript, they can be viewed directly in the browser:
+- Clone the repository.
+- Open a new browser page and choose an index.html file.
