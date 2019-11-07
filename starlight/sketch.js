@@ -1,31 +1,52 @@
+///////////////////////////////////////////////////////////////////////////////
 // Andrea Diotallevi
-// 03/02/2019
+// 03-02-2019
 // Starlight
+///////////////////////////////////////////////////////////////////////////////
 
-let x, y, mx, my, r1, r2, size, t;
+// Set filename
+let filename = "starlight";
+
+// Set canvas size
+let width = 600;
+let height = 600;
+
+// Set time variable
+let time = 0;
+
+// Set frame rate
+let fps = 30;
+
+// Declare radiuses
+let radius1, radius2;
+
+// Declare points coordinates
+let x, y;
+
+// Declare mouse mapping variables for interactive experience
+let mx, my;
 
 function setup() {
-	size = min(windowWidth, windowHeight, 500);
-	createCanvas(size, size);
-	r1 = size / 3.5;
-	r2 = r1 / 3;
-	t = 0;
+	createCanvas(width, height);
+	radius1 = width / 3.5;
+	radius2 = radius1 / 3;
+	frameRate(fps);
+	fill(255, 75);
+	noStroke();
 }
 
 function draw() {
-	translate(size / 2, size / 2);
+	translate(width / 2, height / 2);
 	background(30, 50, 60);
-	fill(255, 75);
-	noStroke();	
-	mx = map(mouseX, 0, size, PI / 18, PI); // Angle of rotation
-	my = map(mouseY, 0, size, 0.005, 0.2); // Time increment
-	t += my;
-	for (var i = 0 + t; i < 2 * PI + t; i += PI / 18) {
-		x = r1 * cos(i);
-		y = r1 * sin(i);				
-		ellipse(x + r2, x - r2, 10, 10);
-		ellipse(y - r2, y + r2, 10, 10);
-		triangle(x + r2, x - r2, y - r2, y + r2, 0, 0);
+	mx = map(mouseX, 0, width, PI / 18, PI); // Angle of rotation
+	my = map(mouseY, 0, height, 0.005, 0.2); // Time increment
+	for (var i = time; i < 2 * PI + time; i += PI / 18) {
+		x = radius1 * cos(i);
+		y = radius1 * sin(i);
+		ellipse(x + radius2, x - radius2, 10, 10);
+		ellipse(y - radius2, y + radius2, 10, 10);
+		triangle(x + radius2, x - radius2, y - radius2, y + radius2, 0, 0);
 		rotate(mx - mx % (PI / 36)); // Lock to angles multiple of 5 degrees
 	}
+	time += my;
 }
