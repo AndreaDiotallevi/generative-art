@@ -15,5 +15,5 @@ The only prerequisites are:
 ## Usage
 
 Since the sketches are made with Javascript, they can be viewed directly from the browser:
-- Clone the repository.
-- Open a browser new page and choose an index.html file.
+- Clone the repository with ```git clone```
+- Open a browser new page and choose an ```index.html``` file
